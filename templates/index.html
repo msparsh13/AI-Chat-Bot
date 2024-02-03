@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Animal  Classification</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+        <style>
+          .history{
+    max-height: 70vh ;
+    overflow-y: scroll;
+
+}
+
+.answer{
+    
+
+   
+}
+
+form #text{
+    position: fixed;
+    bottom : 40px ;
+    height: 10vh ;
+    width: 75vw ;
+    border-radius: 25px;
+    margin: 20px ;
+    border: 1px;
+    border-color: rgb(125, 125, 125);
+    border-style: solid;
+    margin-left: 12vw ;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+    
+}
+
+.main{
+    height : 70vh ;
+    width: 70vw ; 
+    margin-left: 15vw ;
+    margin-right: 15vw ;
+}
+
+.user{
+  margin-left : 30px ;
+  height: fit-content;
+
+
+}
+
+.chat{
+font-size:  20px ;
+display: flex;
+flex-direction: column;
+margin-left: 30px ;
+height: fit-content;
+
+}
+
+.ai{
+    margin-bottom: 70px ;
+}
+
+input[type=text]{
+ font: 25px ;
+ padding: 10px ;
+}
+        </style>
+        
+        <link rel="stylesheet" href="../static/css/style.css">
+      </head>
+<body>
+     
+    <h2>Welcome to Chat App</h2>
+<div class="main">
+    {% if not chat %}
+    <div class="chat" style="margin-bottom: 40px;">
+        <b>Ai</b>
+        <p>Welcome Please Write Your Question in Input</p>
+    </div>
+    {% endif %}
+    <div class="history">
+    {% if chat %}
+    {% for i in chat %}
+        <div class="chat">
+            <b>User</b>
+            <p>{{i[0]}}</p>
+        </div>
+
+        <div class="chat" style="margin-bottom: 40px;">
+            <b>Ai</b>
+            <p>{{i[1]}}</p>
+        </div>
+    {% endfor %} 
+    {% endif %} 
+    <div id="abc"></div> 
+    </div>
+    
+    {% if ans %}
+    <div class="answer chat" >
+    <b>AI</b>
+    <p>{{ans}}</p>
+    </div>
+    {% endif %}
+</div>
+<form action="/submit" id="text" method="POST" >
+    <input type="text" name="text" id="text" id="ip" placeholder="Enter Your Question">
+</form>
+
+</body>
+<script>
+    var element = document.getElementById("abc")
+    element.scrollIntoView();
+
+element.scrollIntoView({behavior: "smooth"});
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+.history{
+    max-height: 70vh ;
+    overflow-y: scroll;
+
+}
+
+.answer{
+    
+
+   
+}
+
+form #text{
+    position: fixed;
+    bottom : 40px ;
+    height: 10vh ;
+    width: 75vw ;
+    border-radius: 25px;
+    margin: 20px ;
+    border: 1px;
+    border-color: rgb(125, 125, 125);
+    border-style: solid;
+    margin-left: 12vw ;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+    
+}
+
+.main{
+    height : 70vh ;
+    width: 70vw ; 
+    margin-left: 15vw ;
+    margin-right: 15vw ;
+}
+
+.user{
+  margin-left : 30px ;
+  height: fit-content;
+
+
+}
+
+.chat{
+font-size:  20px ;
+display: flex;
+flex-direction: column;
+margin-left: 30px ;
+height: fit-content;
+
+}
+
+.ai{
+    margin-bottom: 70px ;
+}
+
+input[type=text]{
+ font: 25px ;
+ padding: 10px ;
+}
