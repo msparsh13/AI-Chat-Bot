@@ -38,11 +38,11 @@
 ||--Backend.py
 
 ```
-
-**Notebook.ipynb** : NoteBook which consist of details regarding model preperation
-**Backend.py** : Backend of Flask APP
-**Style.css** : CSS used
-**Index.html** : Html file
+* **knowledge base** : consist of pdf files which are books of ml
+* **Notebook.ipynb** : NoteBook which consist of details regarding model preperation
+* **Backend.py** : Backend of Flask APP
+* **Style.css** : CSS used
+* **Index.html** : Html file
 
 
   
